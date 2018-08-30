@@ -13,13 +13,21 @@ The training data contains a list of 7049 images. Each row contains the (x,y) co
 Test data contains a list of 1783 test images. Each row contains ImageId and image data as row-ordered list of pixels.
 
 CNN Model
+
 Input (96*96)
+
 Convolutional 32@94*94 -> ReLU -> MaxPool 32@47*47  (3*3 kernel, 2*2 pooling)
+
 Convolutional 64@46*46 -> ReLU -> MaxPool 46@23*23  (2*2 kernel, 2*2 pooling)
+
 Convolutional 128@22*22 -> ReLU -> MaxPool 128@11*11  (2*2 kernel, 2*2 pooling)
+
 Densely connected hidden layers with 500 neurons
+
 Densely connected hidden layers with 500 neurons
+
 Output (30)
+
 
 Evaluation
 Submissions are scored on the Root Mean Squared Error

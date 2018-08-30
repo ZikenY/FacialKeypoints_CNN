@@ -1,7 +1,7 @@
-##Objective
+Objective
 The objective of this task is using Convolutional Neural Network to predict keypoint positions on face images.
 
-##Data description
+Data description
 The data is from Kaggle, which contains a set of face images. The input image consists of a list of 96*96 pixels.
 https://www.kaggle.com/c/facial-keypoints-detection
 
@@ -12,7 +12,14 @@ The input image is given in the last field of the data files, consists of a list
 The training data contains a list of 7049 images. Each row contains the (x,y) coordinates for 15 keypoints, and image data as row-ordered list of pixels;
 Test data contains a list of 1783 test images. Each row contains ImageId and image data as row-ordered list of pixels.
 
-##Evaluation
-Submissions are scored on the Root Mean Squared Error. RMSE is very common and is a suitable general-purpose error metric. Compared to the Mean Absolute Error, RMSE punishes large errors:
+CNN Model
+Input (96*96)
+Convolutional 32@94*94 -> ReLU -> MaxPool 32@47*47  (3*3 kernel, 2*2 pooling)
+Convolutional 64@46*46 -> ReLU -> MaxPool 46@23*23  (2*2 kernel, 2*2 pooling)
+Convolutional 128@22*22 -> ReLU -> MaxPool 128@11*11  (2*2 kernel, 2*2 pooling)
+Densely connected hidden layers with 500 neurons
+Densely connected hidden layers with 500 neurons
+Output (30)
 
-where ŷ is the predicted value and y is the original value.
+Evaluation
+Submissions are scored on the Root Mean Squared Error

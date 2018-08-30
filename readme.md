@@ -34,3 +34,6 @@ Output (30)
 
 --- Evaluation ---
 Submissions are scored on the Root Mean Squared Error(RMSE)
+
+--- Visualization ---
+![Alt text]( result.png?raw=true "")<br />

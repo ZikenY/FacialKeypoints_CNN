@@ -40,8 +40,9 @@ Stochastic Gradient Descent (SGD) and its variants are probably the most used op
 Adam is a method for efficient stochastic optimization that only requires first-order gradients with little memory requirement. Adam Optimizer is used in this project.
 
 ### --- Evaluation ---<br />
-Submissions are scored on the Root Mean Squared Error(RMSE)<br />
+Submissions are scored by Kaggle on the Root Mean Squared Error(RMSE):<br />
 ![Alt text]( rmse.jpg?raw=true "")<br />
+The final score of this submission is 3.18.<br />
 
 ### --- Result visualization ---<br />
 ![Alt text]( result.png?raw=true "")<br />

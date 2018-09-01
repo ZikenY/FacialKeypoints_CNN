@@ -18,12 +18,13 @@ Test data contains a list of 1783 test images. Each row contains ImageId and ima
 ![Alt text]( test_data.png?raw=true "")<br />  
 
 ### --- CNN Model ---<br />
-The formula for calculating the output size for any given convolutional layer is<br />
+The formula for calculating the output size(height or length) for any given convolutional layer is<br />
 ![Alt text]( cnn_layer_compute.jpg?raw=true "")<br />
-where O is the output height/length, W is the input height/length, K is the filter size, P is the padding, and S is the stride.<br />
+where O is the output height/length, W is the input height/length, K is the filter size, P is the padding, and S is the stride.<br /><br />
+
+#### The detailed design in CNN model:<br />
 ![Alt text]( cnn_model.jpg?raw=true "")<br />
 
-The detailed design in CNN model:<br />
 The input image in the training set is 96x96 pixels;<br />
 
 The first convolutional layer contains 32 filters with a 3x3 kernel, the stride is 1. The output feature map is 94x94. A a rectified linear unit (ReLU) is followed after the convolutional layer. And then, a maxpool layer followed the ReLU layer. And a 2x2 max pool is used with stride 2. so the output feature map is 47x47.<br />

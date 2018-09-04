@@ -220,9 +220,9 @@ if __name__ == '__main__':
     # --------- load test set 'test.csv' to predict key_points  ----------
 
 
-    resultfile = open(cwd + '\result.csv','w')
-    resultfile.write('RowId,ImageId, FeatureName,Location\n')
-    submitfile = open(cwd + '\submit.csv', 'w')
+    resultfile = open('.\result.csv','w')
+    resultfile.write('RowId, ImageId, FeatureName,Location\n')
+    submitfile = open('.\submit.csv', 'w')
     submitfile.write('RowId,Location\n')
 
     IdLookupTable = open('IdLookupTable.csv')

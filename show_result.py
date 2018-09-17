@@ -43,7 +43,7 @@ for i in range(0, 10):
 
         
     
-    
+'''
 def show_barbie(jpg_file):
     im = plt.imread(jpg_file, format = 'jpeg')
     plt.imshow(im, cmap = cm.Greys_r)
@@ -68,4 +68,4 @@ def show_barbie(jpg_file):
     output.resize((z.shape[0], z.shape[1]))  #(96, 96)
     plt.figure(jpg_file)
     plt.imshow(output, cmap = cm.Greys_r)
-    
+'''

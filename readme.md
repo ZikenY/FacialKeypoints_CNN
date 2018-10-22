@@ -37,7 +37,7 @@ The third convolutional layer contains 128 filters. The output feature map is si
 
 The fourth convolutional layer contains 256 filters. The output feature map is sized 9x9. After max pooling, the shape of output feature map is 5x5x256.<br />
 
-After the 4 convolutional layer packs, 3 fully connected layers are followed. Each layer has 4096, 4096 and 30 outputs. 2 dropout layers are applied on the FC1 and FC2. The final output vector contains regression value of positions of the 15 keypoints(x, y) <br />
+After the 4 convolutional layer packs, 3 fully connected layers are followed. Each layer has 512, 512 and 30 outputs. A dropout are applied on FC2. The final output vector contains regression value of positions of the 15 keypoints(x, y) <br />
 
 ### --- Optimizer ---<br />
 Stochastic Gradient Descent (SGD) and its variants are probably the most used optimization algorithms for machine learning in general and for deep learning in particular.<br />
@@ -47,7 +47,7 @@ Adam is a method for efficient stochastic optimization that only requires first-
 ### --- Evaluation ---<br />
 Submissions are scored by Kaggle on the Root Mean Squared Error(RMSE):<br />
 ![Alt text]( rmse.jpg?raw=true "")<br />
-The final score of this submission is 3.18.<br />
+The final score of this submission is 3.47.<br />
 
 ### --- Result visualization ---<br />
 ![Alt text]( result.png?raw=true "")<br />

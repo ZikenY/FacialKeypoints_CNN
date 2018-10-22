@@ -25,15 +25,19 @@ where O is the output height/length, W is the input height/length, K is the filt
 #### The detailed design in CNN model:<br />
 ![Alt text]( cnn_model.jpg?raw=true "")<br />
 
-The input image in the training set is 96x96 pixels;<br />
+The input image in the training set is 96x96 pixels.<br />
 
-The first convolutional layer contains 32 filters with a 3x3 kernel, the stride is 1. The output feature map is 94x94. A a rectified linear unit (ReLU) is followed after the convolutional layer. And then, a maxpool layer followed the ReLU layer. And a 2x2 max pool is used with stride 2. so the output feature map is 47x47.<br />
+The network contains 4 convolutional layer packs and 3 fully connection layers. All kernels for the 4 conv-layers have the same size of 3x3 and the same stride of 1. Each conv-layer is followed by a ReLU activation and a 2x2 max pooling layer with stride of 2.<br />
 
-The second convolutional layer contains 64 filters with a 2x2 kernel, the stride is 1. The output feature map is 46x46. Then a ReLU is followed, and following with a maxpool layer with a 2x2 max pool and a stride of 2. so the output feature map is 23x23.<br />
+The first convolutional layer contains 32 filters. The output feature map is sized 94x94. After max pooling, the shape of output feature map is 47x47x32.<br />
 
-The second convolutional layer contains 64 filters with a 2x2 kernel, the stride is 1. The output feature map is 22x22. Then a ReLU is followed, and following with a maxpool layer with a 2x2 max pool and a stride of 2. so the output feature map is 11x11.<br />
+The second convolutional layer contains 64 filters. The output feature map is sized 45x45. After max pooling, the shape of output feature map is 23x23x64.<br />
 
-After the 3 convolutional layers, 3 fully connected layers followed. Each layer has 500, 500 and 30 outputs.<br />
+The third convolutional layer contains 128 filters. The output feature map is sized 21x21. After max pooling, the shape of output feature map is 11x11x128.<br />
+
+The fourth convolutional layer contains 256 filters. The output feature map is sized 9x9. After max pooling, the shape of output feature map is 5x5x256.<br />
+
+After the 4 convolutional layer packs, 3 fully connected layers are followed. Each layer has 4096, 4096 and 30 outputs. 2 dropout layers are applied on the FC1 and FC2. The final output vector contains regression value of positions of the 15 keypoints(x, y) <br />
 
 ### --- Optimizer ---<br />
 Stochastic Gradient Descent (SGD) and its variants are probably the most used optimization algorithms for machine learning in general and for deep learning in particular.<br />

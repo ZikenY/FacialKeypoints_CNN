@@ -13,7 +13,7 @@ import numpy as np
 import os
 from tqdm import tqdm
 
-VALIDATION_SIZE = 10        # size of validation set
+VALIDATION_SIZE = 100       # size of validation set
 EPOCHS = 100                # epochs count
 BATCH_SIZE = 64
 EARLY_STOP_PATIENCE = 10    # if error has not decrease in EARLY_STOP_PATIENCE iterations, 

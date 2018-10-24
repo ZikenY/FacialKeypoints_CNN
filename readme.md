@@ -49,5 +49,9 @@ Submissions are scored by Kaggle on the Root Mean Squared Error(RMSE):<br />
 ![Alt text]( rmse.jpg?raw=true "")<br />
 The final score of this submission is 3.12741.<br />
 
+### --- Futuren work ---<br />
+In this submission I just dropped all incomplete data.
+Feature engineering is needed in future work.
+
 ### --- Result visualization ---<br />
 ![Alt text]( result.png?raw=true "")<br />

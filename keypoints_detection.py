@@ -16,8 +16,7 @@ from tqdm import tqdm
 VALIDATION_SIZE = 50
 EPOCHS = 1200
 BATCH_SIZE = 64
-EARLY_STOP_PATIENCE = 20    # if error has not decrease in EARLY_STOP_PATIENCE iterations, 
-                            #  it is not meaning to continue.
+EARLY_STOP_PATIENCE = 20
 
 '''
     X.shape: (2140, 96, 96, 1)   2140 fotos of size 96x96, 1 channel
@@ -268,7 +267,7 @@ if __name__ == '__main__':
 
 
     resultfile = open('./result.csv','w')
-    resultfile.write('RowId, ImageId, FeatureName,Location\n')
+    resultfile.write('RowId, ImageId, FeatureName, Location\n')
     submitfile = open('./submit.csv', 'w')
     submitfile.write('RowId,Location\n')
 

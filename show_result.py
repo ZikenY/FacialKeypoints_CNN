@@ -40,32 +40,3 @@ for i in range(0, 10):
         plt.plot(locations[j], locations[j+1], marker='x')
         j = j+2
     plt.show()
-
-        
-    
-'''
-def show_barbie(jpg_file):
-    im = plt.imread(jpg_file, format = 'jpeg')
-    plt.imshow(im, cmap = cm.Greys_r)
-    im4d = np.expand_dims(im, axis=0)
-
-    model = tf.Graph()
-    with model.as_default():
-        # perform a 1x1 convolution
-        # shape = 1 x 1 x 3 x 1
-        wts      = tf.constant([[[[0.21], [0.72], [0.07]]]],    # convolution kernel
-                               dtype=tf.float32)                # shape=(1, 1, 3, 1)
-        #input
-        my_image = tf.constant(im4d, dtype=tf.float32)
-        
-        # gray is a op executing 1x1 convolution
-        gray     = tf.nn.conv2d(my_image, wts, [1, 1, 1, 1], padding='SAME')
-        
-    # use 'model' as new graph to execute gray operation
-    with tf.Session(graph=model) as sess:
-        output = sess.run(gray)
-
-    output.resize((z.shape[0], z.shape[1]))  #(96, 96)
-    plt.figure(jpg_file)
-    plt.imshow(output, cmap = cm.Greys_r)
-'''

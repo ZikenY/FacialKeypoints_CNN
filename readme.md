@@ -46,7 +46,7 @@ Adam is a method for efficient stochastic optimization that only requires first-
 
 ### --- Evaluation ---<br />
 Submissions are scored by Kaggle on the Root Mean Squared Error(RMSE):<br />
-<img src="http://chart.googleapis.com/chart?cht=tx&chl=\Large RMSE=\sqrt{\frac{1}{n}\sum_{i=1}^{n}{(y_i-\hat{y}_i)}^2}" style="border:none;">
+<img src="http://www.forkosh.com/mathtex.cgi? \Large RMSE=\sqrt{\frac{1}{n}\sum_{i=1}^{n}{(y_i-\hat{y}_i)}^2}">
 The final score of this submission is 3.12741.<br />
 
 ### --- Future work ---<br />

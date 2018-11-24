@@ -19,7 +19,9 @@ Test data contains a list of 1783 test images. Each row contains ImageId and ima
 
 ### --- CNN Model ---<br />
 The formula for calculating the output size(height or length) for any given convolutional layer is<br />
-![Alt text]( cnn_layer_compute.jpg?raw=true "")<br />
+
+<a href="https://www.codecogs.com/eqnedit.php?latex=O=\frac{W&space;-&space;K&space;&plus;&space;2P}{S}&space;&plus;&space;1" target="_blank"><img src="https://latex.codecogs.com/gif.latex?O=\frac{W&space;-&space;K&space;&plus;&space;2P}{S}&space;&plus;&space;1" title="O=\frac{W - K + 2P}{S} + 1" /></a>
+
 where O is the output height/length, W is the input height/length, K is the filter size, P is the padding, and S is the stride.<br /><br />
 
 #### The detailed design in CNN model:<br />
@@ -46,10 +48,10 @@ Adam is a method for efficient stochastic optimization that only requires first-
 
 ### --- Evaluation ---<br />
 Submissions are scored by Kaggle on the Root Mean Squared Error(RMSE):<br />
+
 <a href="https://www.codecogs.com/eqnedit.php?latex=RMSE=\sqrt{\frac{1}{n}\sum_{i=1}^{n}{(y_i-\hat{y}_i)}^2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?RMSE=\sqrt{\frac{1}{n}\sum_{i=1}^{n}{(y_i-\hat{y}_i)}^2}" title="RMSE=\sqrt{\frac{1}{n}\sum_{i=1}^{n}{(y_i-\hat{y}_i)}^2}" /></a>
 
 ### --- Future work ---<br />
-In this submission I just dropped all incomplete data.
 Feature engineering is needed in the next step.
 
 ### --- Result visualization ---<br />
